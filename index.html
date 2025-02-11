@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>Random Group Generator</title>
+</head>
+
+<body>
+
+    <div class="bg-gray-300">
+        <h1 class="text-6xl text-center ">R.N.G: Random Name Generator</h1>
+
+        <div class="flex justify-evenly mt-10">
+            <input type="text" id="nameInput" class="w-[20%] p-2 border-2 rounded-lg mb-2 bg-white"
+                placeholder="Enter Name">
+
+            <input type="number" id="groupNumberInput" class="w-[20%] p-2 border-2 rounded-lg mb-2 bg-white"
+                placeholder="Group Size">
+        </div>
+
+        <div class="flex justify-evenly mt-7">
+            <button id="addNameBtn" class="border-2 rounded-2xl bg-cyan-300 w-[20%] h-[40px] text-2xl mb-2">Add Name</button>
+            <button id="generateGroupBtn" class="border-2 rounded-2xl bg-cyan-300 w-[20%] h-[40px] text-2xl mb-2">Generate Groups</button>
+        </div>
+    </div>
+
+    <div class="bg-rose-400 h-screen">
+
+        <div class="p-4 flex justify-center">
+            <h2 class="text-5xl mb-4">List of Names:</h2>
+            <div id="namesList" class="space-y-2 max-h-[8000px] overflow-y-auto"></div>
+        </div>
+    </div>
+
+    <div id="groupModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg max-w-2xl w-full m-4">
+            <button id="closeModal" class="float-right text-2xl font-bold">×</button>
+            <div id="groupsContainer" class="mt-4"></div>
+        </div>
+    </div>
+
+
+
+
+
+    <script type="module" src="./scripts/app.js"></script>
+</body>
+
+</html>
